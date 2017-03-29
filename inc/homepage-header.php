@@ -18,22 +18,24 @@ function test_homepage_header() {
 				$on_page_title = get_field('on_page_title');
 				$video_url = get_field('video_link');
 				$content = get_field('home_header_content_editor');
+				$add_btn = get_field('home_add_button_link');
+				$btn = get_field('home_click_through_button');
 
 				?>
 
-				<div class="wrapper center">
+				<div class="home-header-wrapper">
 
 					<?php
 
-					if ($video_url) { ?>
+					if( $video_url) { ?>
 
 						<div class="home-video-player">
-							<iframe width="560" height="315" src="<?php echo $video_url; ?>" frameborder="0" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="<?php echo esc_attr( $video_url ); ?>" frameborder="0" allowfullscreen></iframe>
 						</div><!-- .video-player -->
 
 					<?php }
 
-					if($on_page_title) { ?>
+					if( $on_page_title ) { ?>
 
 						<header class="home-header">
 							<h1 class="home-title">
@@ -52,13 +54,21 @@ function test_homepage_header() {
 
 					<?php }
 
-					if ($content) { ?>
+					if( $content ) { ?>
 
 						<div class="home-header-content">
 
-							<p><?php echo $content; ?></p>
+							<?php echo $content; ?>
 
 						</div><!-- .home-header-content -->
+
+					<?php }
+
+					if( $add_btn ) { ?>
+
+						<div class="home-button-wrapper">
+							<a href="<?php echo esc_url( $btn ); ?>"><button>learn more</button></a>
+						</div><!-- .home-button-wrapper -->
 
 					<?php }
 

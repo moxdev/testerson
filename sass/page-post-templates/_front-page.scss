@@ -1,0 +1,23 @@
+.home {
+    color: #9f9f9f;
+
+    .home-header-wrapper {
+        @extend .wrapper;
+        text-align: center;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .home-feature-img {
+
+    }
+
+    .home-video-player {
+        // padding-top: 3em;
+    }
+
+    .home-title {
+        color: #fff;
+    }
+
+}
