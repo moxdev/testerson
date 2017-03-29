@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: $width_max-content-width;
+    margin-left: auto;
+    margin-right: auto;
+    @include clearfix;
+    @include padding-left-right;
+}
+
+.center {
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
