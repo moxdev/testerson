@@ -30,7 +30,7 @@ function test_homepage_header() {
 					if( $video_url) { ?>
 
 						<div class="home-video-player">
-							<iframe width="560" height="315" src="<?php echo esc_attr( $video_url ); ?>" frameborder="0" allowfullscreen></iframe>
+							<iframe width="560" height="315" src="<?php echo esc_url( $video_url ); ?>" frameborder="0" allowfullscreen></iframe>
 						</div><!-- .video-player -->
 
 					<?php }
