@@ -46,7 +46,7 @@ function test_flexible_content_module() {
                 		<?php
 
                 			if ($img) { ?>
-                				<img src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
+                				<img class="header-img" src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
                 			<?php }
 
                 			if ($header) { ?>
@@ -60,6 +60,74 @@ function test_flexible_content_module() {
                 			if ($editor) { ?>
                 				<?php echo $editor; ?>
                 			<?php }
+
+                			if ($add_split_column) { ?>
+                				<div class="split-column-wrapper">
+                					<div class="left-column"></div>
+                					<div class="right-column"></div>
+                				</div>
+                			<?php }
+
+                			if( have_rows('content_footer') ):
+
+                			    ?>
+
+								<div class="content-footer-wrapper">
+
+                				<?php
+
+                			    while ( have_rows('content_footer') ) : the_row();
+
+                			        if( get_row_layout() == 'standard_button_link' ):
+
+                			        	$file = get_sub_field('button_url');
+                			        	$file = get_sub_field('button_text');
+
+                			        	?><h1>standard</h1><?php
+
+                			        elseif( get_row_layout() == 'call_phone_button' ):
+
+                			        	$phone = get_sub_field('phone_number');
+                			        	$text = get_sub_field('button_text');
+
+                			        	?>
+
+										<a href="tel:<?php echo esc_html( $phone ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
+
+                			        	<?php
+
+                			        elseif( get_row_layout() == 'email_button' ):
+
+                			        	$email = get_sub_field('email_address');
+                			        	$text = get_sub_field('button_text');
+
+                			        	?>
+
+										<a href="mailto:<?php echo esc_html( $email ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
+
+                			        	<?php
+
+                			        elseif( get_row_layout() == 'image' ):
+
+                			        	$img = get_sub_field('image');
+
+                			        	?>
+
+										<img class="footer-img" src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
+
+                			        	<?php
+
+                			        endif;
+
+                			    endwhile;
+
+                			    ?>
+
+                			    </div><!-- content-footer-wrapper -->
+
+                			    <?php
+
+                			endif;
 
                 		?>
 

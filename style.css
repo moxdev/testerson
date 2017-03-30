@@ -580,7 +580,7 @@ a:hover, a:active {
   float: left;
   width: 100%;
   height: 50px;
-  background-color: lightblue;
+  background-color: #282560;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/navigation\/_menus\.scss}line{font-family:\000039}}
 .main-navigation ul {
@@ -1040,7 +1040,7 @@ object {
   padding-bottom: 3em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000319}}
-.advanced-content-section img {
+.advanced-content-section .header-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1048,6 +1048,45 @@ object {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000323}}
 .advanced-content-section h2, .advanced-content-section h3 {
   text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000327}}
+.advanced-content-section .content-footer-wrapper {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000331}}
+.advanced-content-section .content-footer-wrapper a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000335}}
+.advanced-content-section .content-footer-wrapper a button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000340}}
+.advanced-content-section .content-footer-wrapper .footer-img {
+  width: 80px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 950px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000327}}
+  .advanced-content-section .content-footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 /*--------------------------------------------------------------

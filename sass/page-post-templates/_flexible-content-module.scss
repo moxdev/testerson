@@ -16,12 +16,40 @@
     padding-top: 3em;
     padding-bottom: 3em;
 
-    img {
+    .header-img {
         @include center-block;
     }
 
     h2, h3 {
         text-align: center;
+    }
+
+    .content-footer-wrapper {
+        max-width: 500px;
+        @include center-block;
+
+        a {
+
+            text-decoration: none;
+
+            button {
+                @include center-block;
+            }
+        }
+
+        .footer-img {
+            width: 80px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            @include center-block;
+
+        }
+
+        @include respond-to(medium) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
     }
 
 }
