@@ -29,7 +29,7 @@ function test_homepage_header() {
 
 					if( $video_url) { ?>
 
-						<div class="home-video-player">
+						<div class="home-header-video-player">
 							<iframe width="560" height="315" src="<?php echo esc_url( $video_url ); ?>" frameborder="0" allowfullscreen></iframe>
 						</div><!-- .video-player -->
 
@@ -66,7 +66,7 @@ function test_homepage_header() {
 
 					if( $add_btn ) { ?>
 
-						<div class="home-button-wrapper">
+						<div class="home-header-button-wrapper">
 							<a href="<?php echo esc_url( $btn ); ?>"><button>learn more</button></a>
 						</div><!-- .home-button-wrapper -->
 

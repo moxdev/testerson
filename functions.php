@@ -146,3 +146,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * For displaying the Homepage Header.
  */
 require get_template_directory() . '/inc/homepage-header.php';
+
+/**
+ * For displaying the Homepage Header.
+ */
+require get_template_directory() . '/inc/flexible-content-module.php';
