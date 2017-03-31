@@ -62,3 +62,110 @@
 /*--------------------------------------------------------------
 ### Green Left Image Section
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+### Testimonial Section
+--------------------------------------------------------------*/
+
+.testimonial-section {
+    background-color: $color__purple;
+    min-height: 200px;
+
+    .content-section-wrapper {
+        @extend .wrapper;
+    }
+
+    .testimonial-carousel {
+        height: 300px;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .cell {
+            width: 100%;
+
+            &:after {
+                 content: "";
+                 display: block;
+                 padding-bottom: 100%;
+            }
+
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                outline: none;
+                text-decoration: none;
+                transition:box-shadow .25s ease-out;
+                margin: 1em;
+
+                &:hover {
+                    box-shadow: 0 0 7px rgba(0, 0, 0, .35);
+                }
+            }
+
+            img {
+                border-radius: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: .5em;
+            }
+
+            span {
+                display: block;
+
+                &.comm-title {
+                    // font-family: $font__alt-bold;
+                    text-transform: uppercase;
+                }
+
+                &.comm-location {
+                    // color: $color__text-main;
+                }
+            }
+        }
+
+        @include respond-to(x-small) {
+            button.flickity-prev-next-button.previous { left: -80px; }
+            button.flickity-prev-next-button.next { right: -80px; }
+        }
+
+        @include respond-to(small) {
+            max-width: 675px;
+            height: 350px;
+
+            .cell {
+                width: 50%;
+            }
+
+            button.flickity-prev-next-button.previous { left: -45px; }
+            button.flickity-prev-next-button.next { right: -45px; }
+        }
+
+        @include respond-to(medium) {
+            max-width: 925px;
+
+            .cell {
+                width: 33.333%;
+            }
+        }
+
+        @include respond-to(large) {
+            max-width: 1050px;
+
+            .cell {
+                width: 28%;
+                margin: 3% 4%;
+            }
+        }
+    }
+}
+

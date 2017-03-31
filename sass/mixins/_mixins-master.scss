@@ -18,6 +18,12 @@
     table-layout: fixed;
 }
 
+// Reset
+@mixin reset() {
+    margin:0;
+    padding:0;
+}
+
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
     clear: both;

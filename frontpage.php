@@ -16,13 +16,11 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="wrapper">
 
 				<?php if ( function_exists( 'test_flexible_content_module' ) ) {
 				    test_flexible_content_module();
 				} ?>
 
-			</div><!-- .wrapper -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

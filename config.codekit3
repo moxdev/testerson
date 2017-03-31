@@ -129,6 +129,42 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/flickity-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/flickity-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/flickity.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/flickity-min.js",
+		"oF": 2,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/flickity-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/flickity-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/testimonial-carousel-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/testimonial-carousel-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/navigation.js": {
 		"ft": 64,
 		"mi": 1,
@@ -144,6 +180,24 @@
 		"oA": 0,
 		"oAP": "\/js\/skip-link-focus-fix-min.js",
 		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/testimonial-carousel-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/testimonial-carousel-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/testimonial-carousel.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/testimonial-carousel-min.js",
+		"oF": 2,
 		"sC": 1,
 		"tS": 0
 		},
@@ -313,6 +367,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/sass\/.sass-cache\/7457d178de5263ec3c02bd3019707dbfb008a891\/_clearings.scssc",
+		"oF": 0
+		},
+	"\/sass\/.sass-cache\/7457d178de5263ec3c02bd3019707dbfb008a891\/_flickity.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/sass\/.sass-cache\/7457d178de5263ec3c02bd3019707dbfb008a891\/_flickity.scssc",
 		"oF": 0
 		},
 	"\/sass\/.sass-cache\/7457d178de5263ec3c02bd3019707dbfb008a891\/_infinite-scroll.scssc": {
@@ -633,6 +693,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/modules\/_clearings.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/modules\/_flickity.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/modules\/_flickity.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
