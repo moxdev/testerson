@@ -169,3 +169,60 @@
     }
 }
 
+/*--------------------------------------------------------------
+### Associates Section
+--------------------------------------------------------------*/
+
+.associates-section {
+
+    .content-section-wrapper {
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color__text-main;
+
+    }
+
+    img {
+        @include center-block;
+        border-radius: 50%;
+    }
+
+    h4, h5 {
+        @include reset;
+    }
+
+    h4 {
+        margin-top: .5em;
+    }
+
+    .associate-block {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        transition:box-shadow .25s ease-out;
+
+        &:hover {
+            box-shadow: 0 0 7px rgba(0, 0, 0, .35);
+            color: #656b6f;
+        }
+    }
+
+    @include respond-to(small) {
+
+        .flex-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+        .associate-block {
+            flex: 1 0 calc(100% / 3);
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------
+### Associates Section
+--------------------------------------------------------------*/

@@ -201,6 +201,20 @@ function test_create_custom_post_type() {
 }
 add_action( 'init', 'test_create_custom_post_type', 0 );
 
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Associates Settings',
+		'menu_title'	=> 'Associates Settings',
+		'menu_slug' 	=> 'associates-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'position'      => '6.2',
+		'icon_url'     => 'dashicons-universal-access-alt',
+	));
+
+}
+
 
 /**
  * Implement the Custom Header feature.
