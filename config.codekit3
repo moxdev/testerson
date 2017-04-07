@@ -72,6 +72,76 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
+	"\/imgs\/brain-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/brain-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/brain.png": {
+		"ft": 32768,
+		"iS": 1943,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/brain.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/imgs\/brains.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/brains.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/Layer 3.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/Layer 3.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/Logo copy.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/Logo copy.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/opti-brain.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/imgs\/opti-brain.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/imgs\/test.png": {
+		"ft": 32768,
+		"iS": 7744,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/imgs\/test.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/inc\/custom-header.php": {
 		"ft": 8192,
 		"oA": 2,

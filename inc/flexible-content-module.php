@@ -15,31 +15,47 @@ function test_flexible_content_module() {
 
             if( get_row_layout() == 'simple_content_section' ):
 
+                $bg_color = get_sub_field('section_background_color');
+                $bg_image = get_sub_field('section_background_image');
+                $title = get_sub_field('title');
                 $editor = get_sub_field('editor');
 
-                ?>
-                <section class="simple-content-section wrapper">
-                	<div class="content-section-wrapper">
+                if ( $bg_image ) {
 
-                		<?php echo $editor; ?>
+                    ?>
 
-                	</div>
-                </section>
-                <?php
+                    <section class="simple-content-section" style="background-color:<?php echo $bg_color; ?>;background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);">
+                        <div class="content-section-wrapper wrapper">
+                            <div class="editor-wrapper">
 
-            elseif( get_row_layout() == 'purple_background_section' ):
+                                <h2><?php echo esc_html( $title ); ?></h2>
 
-                $header     = get_sub_field('header');
-                $sub_header = get_sub_field('sub_header');
-                $editor     = get_sub_field('editor');
+                                <?php echo $editor; ?>
 
-                ?>
-                <section class="purple-background-section">
-                    <div class="content-section-wrapper">
+                            </div>
+                        </div>
+                    </section>
 
-                    </div>
-                </section>
-                <?php
+                    <?php
+
+                }else {
+                    ?>
+
+                    <section class="simple-content-section" style="background-color:<?php echo $bg_color; ?>">
+                        <div class="content-section-wrapper wrapper">
+                            <div class="editor-wrapper">
+
+                                <h2><?php echo esc_html( $title ); ?></h2>
+
+                                <?php echo $editor; ?>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <?php
+
+                }
 
             elseif( get_row_layout() == 'advanced_content_section' ):
 
@@ -55,97 +71,101 @@ function test_flexible_content_module() {
 
                 ?>
                 <section class="advanced-content-section wrapper">
-                	<div class="content-section-wrapper">
+                    <div class="content-section-wrapper">
 
-                		<?php
+                        <?php
 
-                			if ($img) { ?>
-                				<img class="header-img" src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
-                			<?php }
+                            if ($img) { ?>
+                                <img class="header-img" src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
+                            <?php }
 
-                			if ($header) { ?>
-                				<h2><?php echo esc_html( $header ); ?></h2>
-                			<?php }
+                            if ($header) { ?>
+                                <h2><?php echo esc_html( $header ); ?></h2>
+                            <?php }
 
-                			if ($sub_header) { ?>
-                				<h3><?php echo esc_html( $sub_header ); ?></h3>
-                			<?php }
+                            if ($sub_header) { ?>
+                                <h3><?php echo esc_html( $sub_header ); ?></h3>
+                            <?php }
 
-                			if ($editor) { ?>
-                				<?php echo $editor; ?>
-                			<?php }
+                            if ($editor) { ?>
+                                <?php echo $editor; ?>
+                            <?php }
 
-                			if ($add_split_column) { ?>
-                				<div class="split-column-wrapper">
-                					<div class="left-column"></div>
-                					<div class="right-column"></div>
-                				</div>
-                			<?php }
+                            if ($add_split_column) { ?>
+                                <div class="split-column-wrapper">
+                                    <div class="left-column"></div>
+                                    <div class="right-column"></div>
+                                </div>
+                            <?php }
 
-                			if( have_rows('content_footer') ):
+                            if( have_rows('content_footer') ):
 
-                			    ?>
+                                ?>
 
-								<div class="content-footer-wrapper">
+                                <div class="content-footer-wrapper">
 
-                				<?php
+                                <?php
 
-                			    while ( have_rows('content_footer') ) : the_row();
+                                while ( have_rows('content_footer') ) : the_row();
 
-                			        if( get_row_layout() == 'standard_button_link' ):
+                                    if( get_row_layout() == 'standard_button_link' ):
 
-                			        	$file = get_sub_field('button_url');
-                			        	$file = get_sub_field('button_text');
+                                        $url = get_sub_field('button_url');
+                                        $text = get_sub_field('button_text');
 
-                			        	?><h1>standard</h1><?php
+                                        ?>
 
-                			        elseif( get_row_layout() == 'call_phone_button' ):
+                                        <a href="<?php echo esc_url( $url ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
 
-                			        	$phone = get_sub_field('phone_number');
-                			        	$text = get_sub_field('button_text');
+                                        <?php
 
-                			        	?>
+                                    elseif( get_row_layout() == 'call_phone_button' ):
 
-										<a href="tel:<?php echo esc_html( $phone ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
+                                        $phone = get_sub_field('phone_number');
+                                        $text = get_sub_field('button_text');
 
-                			        	<?php
+                                        ?>
 
-                			        elseif( get_row_layout() == 'email_button' ):
+                                        <a href="tel:<?php echo esc_html( $phone ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
 
-                			        	$email = get_sub_field('email_address');
-                			        	$text = get_sub_field('button_text');
+                                        <?php
 
-                			        	?>
+                                    elseif( get_row_layout() == 'email_button' ):
 
-										<a href="mailto:<?php echo esc_html( $email ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
+                                        $email = get_sub_field('email_address');
+                                        $text = get_sub_field('button_text');
 
-                			        	<?php
+                                        ?>
 
-                			        elseif( get_row_layout() == 'image' ):
+                                        <a href="mailto:<?php echo esc_html( $email ); ?>"><button><?php echo esc_html( $text ); ?></button></a>
 
-                			        	$img = get_sub_field('image');
+                                        <?php
 
-                			        	?>
+                                    elseif( get_row_layout() == 'image' ):
 
-										<img class="footer-img" src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
+                                        $img = get_sub_field('image');
 
-                			        	<?php
+                                        ?>
 
-                			        endif;
+                                        <img class="footer-img" src="<?php echo $img['sizes']['flexible-content-module-footer-image']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
 
-                			    endwhile;
+                                        <?php
 
-                			    ?>
+                                    endif;
 
-                			    </div><!-- content-footer-wrapper -->
+                                endwhile;
 
-                			    <?php
+                                ?>
 
-                			endif;
+                                </div><!-- content-footer-wrapper -->
 
-                		?>
+                                <?php
 
-                	</div>
+                            endif;
+
+                        ?>
+
+                    </div>
                 </section>
                 <?php
 
@@ -157,8 +177,8 @@ function test_flexible_content_module() {
 
                 ?>
                 <section class="green-brain-section">
-					<div class="content-section-wrapper">
-					</div>
+                    <div class="content-section-wrapper">
+                    </div>
 
                 </section>
                 <?php
@@ -170,8 +190,8 @@ function test_flexible_content_module() {
 
                 ?>
                 <section class="green-left-image-section">
-					<div class="content-section-wrapper">
-					</div>
+                    <div class="content-section-wrapper">
+                    </div>
 
                 </section>
                 <?php
@@ -184,16 +204,22 @@ function test_flexible_content_module() {
                 <section class="testimonial-section">
                     <div class="content-section-wrapper">
 
+                        <div class="microphone-section">
+                            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="47" viewBox="0 0 26 47"><title>microphone</title><image width="26" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAvCAYAAAD9/drQAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAqFJREFUWIXtlz9IlHEYx7/v2aDnFEX+CSxFxEHJTXSRojrBIUMQnBoCl6IxilocXGpxaChbEsJVWlpaXJoMpEHEwDDxAsWGBs8Q7dPg9+jHed7de4cIcg/8hnue7/f5/N7fvffe+0hFAkgAw8B7YB3Y81p3bhhIFOtTDNIDLPI/loGPXstBfhHoKReSAjLAAfAWaMujaXPtwNpUXEi3jb+BwRL0g9ZmgO5SIRGwAPwFhmJsbsieBSAqxZDyuc+UCgm8M/YWP0Jg2uKuMkBd9k6XIl4C0nEhgT8NLOXm893/TZJ+lAuyt6kU0HlJexWA9tyjKOhEogqqgqqgKug0QUAv0HxSAKAZ6BWwD8wGBYD5ChrPAwSfZ4H9hKQaScmKtl04kpJqzuDNcJqgXUnF38uOj8g9joD2JdUFuQ1JDRWAGtwjG3WS9hOSvkvqDArLkjqAxrgEezrcIxudklYTkhYktQBXXJjT4eXfjwuyJ3IPAVcltUj6ImDMP9InLiaBTb+0t8a4mlZ7NoGkc0/de0xAPbANbAC1FoxasAQceRnMA2myFmDUuVr33Abqs8LnFk0E5knn0sBIvgnBk8eINQCTQW3CuWehoQ5Y8XPvepB/CPyx4RswBTzymnIOax4EvhvutZI9pRDWA+z4nPuDfBvw2mefG5uutQX6fvfY4bhxk8PJLQPsAuPhcXE4NHcCN706CYZkH+O4vRmKTYpAH/DTO/4M3KbA1O0NpKzF3r5cXd5HDXBB0gtJ93T4N5KW9EnSV0lbll2SdE3SLUmXJR1ImpH0OIqiXwWvJg+wHXgJrOb5frKxak17rOYFoI3AALDlNUAZj6k4wDVgLa7v7P3xnStUBO5KupOTvujau5z8hyiK5sraBfCmwN2WG68K9foHxhhKjiKV7REAAAAASUVORK5CYII="/></svg>
+                            <h5>testimonials</h5>
+                        </div>
+
                         <?php
 
                         if ($add_testimonial) {
+
                             // WP_Query arguments
                             $args = array(
-                                'post_type'   => array( 'testimonials' ),
-                                'post_status' => array( 'publish' ),
-                                'nopaging'    => true,
-                                'order'       => 'DESC',
-                                'orderby'     => 'date',
+                                'post_type'              => array( 'testimonials' ),
+                                'post_status'            => array( 'publish' ),
+                                'nopaging'               => true,
+                                'order'                  => 'DESC',
+                                'orderby'                => 'date',
                             );
 
                             // The Query
@@ -213,7 +239,13 @@ function test_flexible_content_module() {
 
                                     <div class="cell">
 
-                                        <?php the_content(); ?>
+                                        <?php
+                                        $job_title = get_field('job_title');
+
+                                        the_content('<p>' , '</p>');
+                                        the_title('<h4>' , '</h4>');
+                                        echo '<h5>'. esc_html($job_title) . '</h5>';
+                                        ?>
 
                                     </div><!-- cell -->
 
@@ -241,89 +273,13 @@ function test_flexible_content_module() {
                 </section>
                 <?php
 
-            elseif( get_row_layout() == 'associates_section' ):
-
-                $add_associates = get_sub_field('add_the_associates_section');
-
-                ?>
-                <section class="associates-section wrapper">
-                    <div class="content-section-wrapper">
-
-                        <?php
-
-                        if ($add_associates) {
-
-                            $title = get_field( 'associates_section_title', 'option' );
-                            $blurb = get_field( 'associates_blurb', 'option' );
-
-                            if ($title) {
-                                echo '<h2>' . esc_html( $title ) . '</h2>';
-                            }
-
-                            if ($blurb) {
-                                echo $blurb;
-                            }
-
-                            if( have_rows( 'associates_information', 'option' ) ): ?>
-
-                                <div class="flex-wrapper">
-
-                                <?php while( have_rows( 'associates_information', 'option' ) ): the_row();
-
-                                    $img = get_sub_field('associates_img');
-                                    $name  = get_sub_field('associates_name');
-                                    $title = get_sub_field('associates_title');
-                                    $page = get_sub_field('associates_page');
-
-                                    ?>
-
-                                    <div class="associate-block">
-
-                                            <a href="<?php echo esc_url( $page ); ?>">
-
-                                            <?php if( $img ): ?>
-
-                                                <img src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
-
-                                            <?php endif; ?>
-
-
-                                            <?php if( $name ): ?>
-
-                                                <?php echo '<h4>' . esc_html( $name ) . '</h4>'; ?>
-
-                                            <?php endif; ?>
-
-                                            <?php if( $title ): ?>
-
-                                                <?php echo '<h5>' . esc_html( $title ) . '</h5>'; ?>
-
-                                            <?php endif; ?>
-
-                                            </a>
-
-                                    </div>
-
-                                <?php endwhile; ?>
-
-                                </div><!-- flex-wrapper -->
-
-                            <?php endif;
-
-                        }else {
-                            echo '<h4>There were no Associates found. Please add an Associate in your Dashboard or remove the Associates Section from the page.</h4>';
-                        }
-
-                        ?>
-
-                    </div>
-
-                </section><!-- associates-section wrapper -->
-                <?php
-
             endif;
 
         endwhile;
+
+    else :
+
+        // no layouts found
 
     endif;
 

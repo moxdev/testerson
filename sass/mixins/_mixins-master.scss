@@ -68,6 +68,11 @@
     }
 }
 
+@mixin section-padding() {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 // Outside padding
 @mixin padding-left-right() {
     padding-left: 1.75rem;
