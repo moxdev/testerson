@@ -169,20 +169,6 @@ function test_flexible_content_module() {
                 </section>
                 <?php
 
-            elseif( get_row_layout() == 'green_brain_section' ):
-
-                $header     = get_sub_field('header');
-                $sub_header = get_sub_field('sub_header');
-                $editor     = get_sub_field('editor');
-
-                ?>
-                <section class="green-brain-section">
-                    <div class="content-section-wrapper">
-                    </div>
-
-                </section>
-                <?php
-
             elseif( get_row_layout() == 'green_left_image_section' ):
 
                 $image = get_sub_field('image');
@@ -272,6 +258,8 @@ function test_flexible_content_module() {
 
                 </section>
                 <?php
+
+            elseif( get_row_layout() == 'mid_page_navigation' ):
 
             endif;
 
