@@ -1206,25 +1206,24 @@ object {
 --------------------------------------------------------------*/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\000035}}
 .simple-content-section {
+  color: #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\000039}}
+.simple-content-section .background-color {
   background-repeat: no-repeat;
-  vertical-align: middle;
-  background-size: 30%;
-  background-position: 20% 50%;
+  /* vertical-align: middle; */
+  background-size: contain;
+  background-position: -200px 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000312}}
-.simple-content-section h2 {
-  color: #fff;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000318}}
 .simple-content-section .content-section-wrapper {
   padding-top: 3em;
   padding-bottom: 3em;
+  background-color: rgba(36, 207, 95, 0.7);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000325}}
 .simple-content-section .editor-wrapper {
-  text-align: left;
-  width: 50%;
-  margin-left: auto;
+  margin-left: calc(50% - 100px);
 }
 
 /*--------------------------------------------------------------
@@ -1286,20 +1285,120 @@ object {
 }
 
 /*--------------------------------------------------------------
-### Green Brain Section
+### Color Callout Section
 --------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000382}}
+.color-callout-section-img {
+  color: #000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000386}}
+.color-callout-section-img h2 {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000390}}
+.color-callout-section-img .background-img-fade {
+  padding: 0;
+  background-size: 150%;
+  background-position: -250px 80%;
+  background-repeat: no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000397}}
+.color-callout-section-img .content-section-wrapper {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-color: rgba(36, 207, 95, 0.7);
+}
+@media screen and (min-width: 400px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003103}}
+  .color-callout-section-img .background-img-fade {
+    background-size: contain;
+    background-position: -200px 70%;
+  }
+}
+@media screen and (min-width: 750px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003110}}
+  .color-callout-section-img .background-img-fade {
+    background-position: -20% 50%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003115}}
+  .color-callout-section-img .editor-wrapper {
+    margin-left: calc(50% - 100px);
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003121}}
+.color-callout-section-no-img {
+  color: #000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003125}}
+.color-callout-section-no-img h2 {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003129}}
+.color-callout-section-no-img .content-section-wrapper {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003132}}
+.color-callout-section-no-img .content-section-wrapper .color-callout-img {
+  display: block;
+  margin-bottom: 2em;
+  text-align: center;
+}
+@media screen and (min-width: 750px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003144}}
+  .color-callout-section-no-img .content-section-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003147}}
+  .color-callout-section-no-img .content-section-wrapper .color-callout-img {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003152}}
+  .color-callout-section-no-img .content-section-wrapper .editor-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
 /*--------------------------------------------------------------
-### Green Left Image Section
+### Mid Page Navigation Section
 --------------------------------------------------------------*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003166}}
+.mid-page-navigation-section .content-section-wrapper {
+  background-color: #f53f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003169}}
+.mid-page-navigation-section .content-section-wrapper .nav-container {
+  width: 24%;
+  min-height: 175px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 24%;
+          flex: 1 1 24%;
+}
+
 /*--------------------------------------------------------------
 ### Testimonial Section
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003185}}
 .testimonial-section {
   background-color: #282560;
   min-height: 200px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003193}}
 .testimonial-section .testimonial-carousel {
   height: 300px;
   width: 100%;
@@ -1307,17 +1406,17 @@ object {
   margin-left: auto;
   margin-right: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003200}}
 .testimonial-section .testimonial-carousel .cell {
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003203}}
 .testimonial-section .testimonial-carousel .cell:after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003116}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003209}}
 .testimonial-section .testimonial-carousel .cell a {
   position: absolute;
   left: 0;
@@ -1340,11 +1439,11 @@ object {
   transition: box-shadow .25s ease-out;
   margin: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003223}}
 .testimonial-section .testimonial-carousel .cell a:hover {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003228}}
 .testimonial-section .testimonial-carousel .cell img {
   border-radius: 50%;
   display: block;
@@ -1352,59 +1451,59 @@ object {
   margin-right: auto;
   margin-bottom: .5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003236}}
 .testimonial-section .testimonial-carousel .cell span {
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003239}}
 .testimonial-section .testimonial-carousel .cell span.comm-title {
   text-transform: uppercase;
 }
 @media screen and (min-width: 575px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003251}}
   .testimonial-section .testimonial-carousel button.flickity-prev-next-button.previous {
     left: -80px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003252}}
   .testimonial-section .testimonial-carousel button.flickity-prev-next-button.next {
     right: -80px;
   }
 }
 @media screen and (min-width: 750px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003193}}
   .testimonial-section .testimonial-carousel {
     max-width: 675px;
     height: 350px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003259}}
   .testimonial-section .testimonial-carousel .cell {
     width: 50%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003263}}
   .testimonial-section .testimonial-carousel button.flickity-prev-next-button.previous {
     left: -45px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003264}}
   .testimonial-section .testimonial-carousel button.flickity-prev-next-button.next {
     right: -45px;
   }
 }
 @media screen and (min-width: 950px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003193}}
   .testimonial-section .testimonial-carousel {
     max-width: 925px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003270}}
   .testimonial-section .testimonial-carousel .cell {
     width: 33.333%;
   }
 }
 @media screen and (min-width: 1200px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003193}}
   .testimonial-section .testimonial-carousel {
     max-width: 1050px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003278}}
   .testimonial-section .testimonial-carousel .cell {
     width: 28%;
     margin: 3% 4%;
@@ -1414,45 +1513,45 @@ object {
 /*--------------------------------------------------------------
 ### Associates Section
 --------------------------------------------------------------*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003292}}
 .associates-section .content-section-wrapper {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003296}}
 .associates-section a {
   text-decoration: none;
   color: #656b6f;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003302}}
 .associates-section img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003307}}
 .associates-section h4, .associates-section h5 {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003218}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003311}}
 .associates-section h4 {
   margin-top: .5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003315}}
 .associates-section .associate-block {
   padding-top: 2em;
   padding-bottom: 2em;
   -webkit-transition:box-shadow .25s ease-out;
   transition: box-shadow .25s ease-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003320}}
 .associates-section .associate-block:hover {
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
   color: #656b6f;
 }
 @media screen and (min-width: 750px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003328}}
   .associates-section .flex-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1462,7 +1561,7 @@ object {
     -ms-flex-line-pack: center;
         align-content: center;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003240}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/GraphicDesigner\/Sites\/htdocs\/test-site\/wp-content\/themes\/test\/sass\/page-post-templates\/_flexible-content-module\.scss}line{font-family:\00003333}}
   .associates-section .associate-block {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 calc(100% / 3);

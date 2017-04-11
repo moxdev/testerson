@@ -3,28 +3,28 @@
 --------------------------------------------------------------*/
 
 .simple-content-section {
-    // min-height: 400px;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    background-size: 30%; // change responsive sizes
-    background-position: 20% 50%; // change responsive sizes
 
-    h2 {
-        color: #fff;
+    color: #333;
+
+    .background-color {
+        background-repeat: no-repeat;
+        /* vertical-align: middle; */
+        background-size: contain;
+        background-position: -200px 50%;
+
+
     }
 
     .content-section-wrapper {
         @include section-padding;
+        background-color: rgba(36,207,95, 0.7);
+
+
     }
 
     .editor-wrapper {
-        text-align: left;
-        width: 50%;
-        margin-left: auto;
+        margin-left: calc(50% - 100px);
     }
-
-
-
 
 }
 
@@ -76,14 +76,107 @@
 }
 
 /*--------------------------------------------------------------
-### Green Brain Section
+### Color Callout Section
 --------------------------------------------------------------*/
 
+.color-callout-section-img {
+
+    color: #000;
+
+    h2 {
+        color: #fff;
+    }
+
+    .background-img-fade {
+        padding:0;
+        background-size: 150%;
+        background-position: -250px 80%;
+        background-repeat: no-repeat;
+    }
+
+    .content-section-wrapper {
+        @include section-padding;
+        background-color: rgba(36,207,95, 0.7);
+    }
+
+    @include respond-to(mobile) {
+        .background-img-fade {
+            background-size: contain;
+            background-position: -200px 70%;
+        }
+    }
+
+    @include respond-to(small) {
+        .background-img-fade {
+            // background-size: 70%;
+            background-position: -20% 50%;
+        }
+
+        .editor-wrapper {
+            margin-left: calc(50% - 100px);
+        }
+    }
+}
+
+.color-callout-section-no-img {
+
+    color: #000;
+
+    h2 {
+        color: #fff;
+    }
+
+    .content-section-wrapper {
+        @include section-padding;
+
+        .color-callout-img {
+            display: block;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+    }
+
+    @include respond-to(mobile) {
+
+    }
+
+    @include respond-to(small) {
+        .content-section-wrapper {
+            display: flex;
+
+            .color-callout-img {
+                display: inline-flex;
+                flex: 1 0 30%;
+            }
+
+            .editor-wrapper {
+                flex: 1 1 auto;
+            }
+        }
+    }
+}
 
 /*--------------------------------------------------------------
-### Green Left Image Section
+### Mid Page Navigation Section
 --------------------------------------------------------------*/
 
+.mid-page-navigation-section {
+
+
+    .content-section-wrapper {
+        background-color: $color__orange;
+        display: flex;
+        .nav-container {
+            width: 24%;
+            min-height: 175px;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            flex: 1 1 24%;
+        }
+
+
+    }
+}
 
 /*--------------------------------------------------------------
 ### Testimonial Section
