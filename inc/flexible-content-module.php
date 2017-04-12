@@ -195,11 +195,11 @@ function test_flexible_content_module() {
 
                     ?>
 
-                    <section class="color-callout-section-img" style="background-color:<?php echo $bg_color; ?>;">
+                    <section class="color-callout-section-img" style="">
 
-                        <div class="background-img-fade wrapper" style="background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);">
+                        <div class="background-img-fade wrapper" style="background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);background-color:<?php echo $bg_color; ?>;">
 
-                            <div class="content-section-wrapper wrapper">
+                            <div class="content-section-wrapper">
                                 <div class="editor-wrapper">
 
                                     <h2><?php echo esc_html( $title ); ?></h2>
@@ -220,8 +220,8 @@ function test_flexible_content_module() {
                     $img = get_sub_field('image');
                     ?>
 
-                    <section class="color-callout-section-no-img" style="background-color:<?php echo $bg_color; ?>">
-                        <div class="content-section-wrapper wrapper">
+                    <section class="color-callout-section-no-img">
+                        <div class="content-section-wrapper wrapper" style="background-color:<?php echo $bg_color; ?>">
 
                             <figure class="color-callout-img">
                                 <img src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>" description="<?php echo $img['description']; ?>">
@@ -244,34 +244,40 @@ function test_flexible_content_module() {
                 if( have_rows('page_link_navigation') ): ?>
 
                     <section class="mid-page-navigation-section">
-                        <div class="content-section-wrapper wrapper">
+                        <div class="content-section-wrapper">
+                            <div class="margin-wrapper">
 
-                        <?php while( have_rows('page_link_navigation') ): the_row();
+                                <?php while( have_rows('page_link_navigation') ): the_row();
 
-                            $title = get_sub_field('page_title');
-                            $text  = get_sub_field('link_text');
-                            $link  = get_sub_field('page_link');
+                                    $title = get_sub_field('page_title');
+                                    $text  = get_sub_field('link_text');
+                                    $link  = get_sub_field('page_link');
 
-                        ?>
+                                ?>
 
-                            <div class="nav-container">
+                                    <div class="nav-container">
+                                        <div class="nav-wrapper">
+                                            <div class="nav-content">
 
-                                <?php if( $title ) : ?>
+                                                <?php if( $title ) : ?>
 
-                                    <?php echo $title; ?>
+                                                    <h3><?php echo esc_html( $title ); ?></h3>
 
-                                <?php endif; ?>
+                                                <?php endif; ?>
 
-                                <?php if( $link ) : ?>
+                                                <?php if( $link ) : ?>
 
-                                    <a href="<?php echo esc_html( $link ); ?>"><?php echo esc_html( $text ); ?></a>
+                                                    <a href="<?php echo esc_html( $link ); ?>"><?php echo esc_html( $text ); ?></a>
 
-                                <?php endif; ?>
+                                                <?php endif; ?>
+
+                                            </div><!-- nav-content -->
+                                        </div><!-- nav-wrapper -->
+                                    </div><!-- nav-container -->
+
+                                <?php endwhile; ?>
 
                             </div>
-
-                        <?php endwhile; ?>
-
                         </div>
                     </section>
 

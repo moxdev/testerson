@@ -162,19 +162,54 @@
 
 .mid-page-navigation-section {
 
-
     .content-section-wrapper {
+        max-width: $width_max-content-width;
+        margin-left: auto;
+        margin-right: auto;
         background-color: $color__orange;
-        display: flex;
-        .nav-container {
-            width: 24%;
-            min-height: 175px;
-            border-right: 1px solid #fff;
-            border-left: 1px solid #fff;
-            flex: 1 1 24%;
+
+
+        .margin-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -1px;
         }
 
+        .nav-container {
+            background-color: #fff;
+            flex: 1 1 50%;
 
+            .nav-wrapper {
+                background-color: $color__orange;
+                min-height: 100px;
+                margin-bottom: 1px;
+                margin-right: 1px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .nav-content {
+                max-width: 50%;
+                text-align: center;
+                color: #fff;
+            }
+
+            h3 {
+                @include reset;
+                display: block;
+                color: #000;
+                text-transform: uppercase;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -183,10 +218,11 @@
 --------------------------------------------------------------*/
 
 .testimonial-section {
-    background-color: $color__purple;
+
     min-height: 200px;
 
     .content-section-wrapper {
+        background-color: $color__purple;
         @extend .wrapper;
     }
 
