@@ -1,8 +1,10 @@
 // Carousel
 var elem = document.querySelector('.testimonial-carousel');
 var flkty = new Flickity( elem, {
+    resize: true;
     contain: true,
-    pageDots: false,
+    pageDots: true,
     setGallerySize: false,
-    groupCells: true
+    groupCells: true,
+    autoPlay: true
 });
