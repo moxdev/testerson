@@ -1,18 +1,29 @@
 
 $color__purple: #282560;
 $color__green: #24cf5f;
-$color__blue: #254b99;
+$color__blue: #2e71f2;
 $color__orange: #f53f00;
-$color__light-gray: #e8e8e8;
+$color__xlight-gray: #e8e8e8;
+$color__light-gray: #666666;
+$color__med-gray: #656b6f;
 $color__dark-gray: #3b3d40;
 
+//#3c3d41 ?
 
-// Associates
-//#656b6f;
-//#3b3d40;
+$color__bg-ltgray: $color__xlight-gray;
+$color__bg-dkgray: $color__dark-gray;
+$color__bg-purple: $color__purple;
+$color__bg-green: $color__green;
 
-$color__text-main: #656b6f;
-$color__gray-heading: #666666;
+$color__overlay: $color__purple;
+//$color__overlay: #9392af;
+
+$color__h1:#ffffff;
+$color__h2:$color__dark-gray;
+$color__h3:$color__med-gray;
+
+$color__text-main: $color__med-gray;
+$color__gray-heading: $color__light-gray;
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;

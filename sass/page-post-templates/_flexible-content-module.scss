@@ -63,84 +63,275 @@
 }
 
 /*--------------------------------------------------------------
-### Color Callout Section
+### Color Callout Section OG
 --------------------------------------------------------------*/
 
-.color-callout-section-img {
+// .color-callout-section-img {
 
-    color: #000;
+//     color: #000;
 
-    h2 {
-        color: #fff;
-    }
+//     h2 {
+//         color: #fff;
+//     }
 
-    .background-img-fade {
-        padding:0;
-        background-size: 150%;
-        background-position: -250px 80%;
-        background-repeat: no-repeat;
-    }
+//     .background-img-fade {
+//         padding:0;
+//         background-size: 150%;
+//         background-position: -250px 80%;
+//         background-repeat: no-repeat;
+//     }
 
-    .content-section-wrapper {
-        @include section-padding;
-        background-color: rgba(36,207,95, 0.7);
-    }
+//     .content-section-wrapper {
+//         @include section-padding;
+//         background-color: rgba(36,207,95, 0.7);
+//     }
 
-    @include respond-to(mobile) {
-        .background-img-fade {
-            background-size: contain;
-            background-position: -200px 70%;
-        }
-    }
+//     @include respond-to(mobile) {
+//         .background-img-fade {
+//             background-size: contain;
+//             background-position: -200px 70%;
+//         }
+//     }
 
-    @include respond-to(small) {
-        .background-img-fade {
-            // background-size: 70%;
-            background-position: -20% 50%;
-        }
+//     @include respond-to(small) {
+//         .background-img-fade {
+//             // background-size: 70%;
+//             background-position: -20% 50%;
+//         }
 
-        .editor-wrapper {
-            margin-left: calc(50% - 100px);
-        }
-    }
-}
+//         .editor-wrapper {
+//             margin-left: calc(50% - 100px);
+//         }
+//     }
+// }
 
-.color-callout-section-no-img {
+// .color-callout-section-no-img {
 
-    color: #000;
+//     color: #000;
 
-    h2 {
-        color: #fff;
-    }
+//     h2 {
+//         color: #fff;
+//     }
 
-    .content-section-wrapper {
-        @include section-padding;
+//     .content-section-wrapper {
+//         @include section-padding;
+
+//         .color-callout-img {
+//             display: block;
+//             margin-bottom: 2em;
+//             text-align: center;
+//         }
+//     }
+
+//     @include respond-to(mobile) {
+
+//     }
+
+//     @include respond-to(small) {
+//         .content-section-wrapper {
+//             display: flex;
+
+//             .color-callout-img {
+//                 display: inline-flex;
+//                 flex: 1 0 30%;
+//             }
+
+//             .editor-wrapper {
+//                 flex: 1 1 auto;
+//             }
+//         }
+//     }
+// }
+
+
+/*--------------------------------------------------------------
+### Color Callout Section Copy
+--------------------------------------------------------------*/
+
+//style="background-image:url(http://localhost:8888/leading-minds/wp-content/themes/leading_minds/imgs/brains.svg);background-color:<?php echo $bg_color; ?>;"
+
+/*
+
+xbg-default : White (Default)
+xgreen-brain-left : Green Section (Brain Left)
+xlt-gray-brain-left : Light Gray Section (Brain Left)
+gxreen-brain-center : Green Section (Brain Center)
+lt-gray-brain-center : Light Gray (Brain Center)
+green-img-left : Green Section (Image Left)
+bg-none : None
+
+*/
+
+.color-callout-section {
+
+    .bg-default {
+        background-color: #fff;
+
+        text-align: center;
 
         .color-callout-img {
-            display: block;
-            margin-bottom: 2em;
-            text-align: center;
+            display: none;
         }
     }
 
-    @include respond-to(mobile) {
+    .green-brain-left {
+        background-color: $color__bg-green;
 
+        .color-callout-img {
+            display: none;
+        }
+
+        .background-image {
+            padding:0;
+            background-repeat: no-repeat;
+            background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);
+            background-size: 50%;
+            background-position: -250px 80%;
+
+            .content-section-wrapper {
+                @include section-padding;
+                background-color: rgba(36,207,95, 0.7);
+            }
+
+            @include respond-to(mobile) {
+                background-size: contain;
+                background-position: -200px 70%;
+            }
+
+            @include respond-to(small) {
+                background-position: -20% 50%;
+
+                .editor-wrapper {
+                    margin-left: calc(50% - 100px);
+                }
+            }
+        }
     }
 
-    @include respond-to(small) {
+    .lt-gray-brain-left {
+        background-color: $color__bg-ltgray;
+
+        .color-callout-img {
+            display: none;
+        }
+
+        .background-image {
+            padding:0;
+            background-repeat: no-repeat;
+            background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);
+            background-size: 50%;
+            background-position: -250px 80%;
+
+            .content-section-wrapper {
+                @include section-padding;
+                background-color: rgba(232,232,232, 0.7);
+            }
+
+            @include respond-to(mobile) {
+                background-size: contain;
+                background-position: -200px 70%;
+            }
+
+            @include respond-to(small) {
+                background-position: -20% 50%;
+
+                .editor-wrapper {
+                    margin-left: calc(50% - 100px);
+                }
+            }
+        }
+    }
+
+    .green-brain-center {
+        background-color: $color__bg-green;
+        text-align: center;
+
+        .color-callout-img {
+            display: none;
+        }
+
+        .background-image {
+            padding:0;
+            background-repeat: no-repeat;
+            background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);
+            background-size: 40%;
+            background-position: 50%;
+
+            .content-section-wrapper {
+                @include section-padding;
+                background-color: rgba(36,207,95, 0.7);
+            }
+
+            h2 {
+                color: #fff;
+            }
+        }
+    }
+
+    .lt-gray-brain-center {
+        background-color: $color__bg-green;
+        text-align: center;
+
+        .color-callout-img {
+            display: none;
+        }
+
+        .background-image {
+            padding:0;
+            background-repeat: no-repeat;
+            background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/brains.svg);
+            background-size: 40%;
+            background-position: 50%;
+
+            .content-section-wrapper {
+                @include section-padding;
+                background-color: rgba(36,207,95, 0.7);
+            }
+
+            h2 {
+                color: #fff;
+            }
+        }
+    }
+
+    .green-img-left {
+
+        background-color: $color__bg-green;
+
+        h2 {
+            color: #fff;
+        }
+
         .content-section-wrapper {
-            display: flex;
+            @include section-padding;
 
             .color-callout-img {
-                display: inline-flex;
-                flex: 1 0 30%;
+                display: block;
+                margin-bottom: 2em;
+                text-align: center;
+                }
             }
 
-            .editor-wrapper {
-                flex: 1 1 auto;
+            @include respond-to(mobile) {
+
             }
-        }
+
+            @include respond-to(small) {
+                .content-section-wrapper {
+                    display: flex;
+
+                    .color-callout-img {
+                        display: inline-flex;
+                        flex: 1 0 30%;
+                    }
+
+                    .editor-wrapper {
+                        flex: 1 1 auto;
+                    }
+                }
+            }
     }
+
 }
 
 /*--------------------------------------------------------------

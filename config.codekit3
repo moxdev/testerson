@@ -164,6 +164,42 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/inc\/acf-advanced-content-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-advanced-content-section.php",
+		"oF": 0
+		},
+	"\/inc\/acf-associates-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-associates-section.php",
+		"oF": 0
+		},
+	"\/inc\/acf-color-content-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-color-content-section.php",
+		"oF": 0
+		},
+	"\/inc\/acf-mid-page-navigation-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-mid-page-navigation-section.php",
+		"oF": 0
+		},
+	"\/inc\/acf-simple-content-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-simple-content-section.php",
+		"oF": 0
+		},
+	"\/inc\/acf-testimonial-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/acf-testimonial-section.php",
+		"oF": 0
+		},
 	"\/inc\/custom-header.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -174,6 +210,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/customizer.php",
+		"oF": 0
+		},
+	"\/inc\/DNU-acf-color-content-section.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/DNU-acf-color-content-section.php",
 		"oF": 0
 		},
 	"\/inc\/extras.php": {
