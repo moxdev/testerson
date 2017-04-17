@@ -251,3 +251,13 @@ require get_template_directory() . '/inc/homepage-header.php';
  * For displaying the Homepage Header.
  */
 require get_template_directory() . '/inc/flexible-content-module.php';
+
+/**
+ * Section Modules.
+ */
+require get_template_directory() . '/inc/acf-color-content-section.php';
+require get_template_directory() . '/inc/acf-simple-content-section.php';
+require get_template_directory() . '/inc/acf-advanced-content-section.php';
+require get_template_directory() . '/inc/acf-mid-page-navigation-section.php';
+require get_template_directory() . '/inc/acf-testimonial-section.php';
+require get_template_directory() . '/inc/acf-associates-section.php';
