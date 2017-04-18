@@ -373,6 +373,12 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
+	"\/page-blog.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-blog.php",
+		"oF": 0
+		},
 	"\/page.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -561,6 +567,12 @@
 		"ft": 8192,
 		"oA": 1,
 		"oAP": "\/sass\/.sass-cache\/a2e8eb63213b422903699c471a749a9c3c6f4ae6\/_variables-site.scssc",
+		"oF": 0
+		},
+	"\/sass\/.sass-cache\/bab7501428e1298f693d8df00c7502aa9d07be91\/_blog-posts.scssc": {
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/sass\/.sass-cache\/bab7501428e1298f693d8df00c7502aa9d07be91\/_blog-posts.scssc",
 		"oF": 0
 		},
 	"\/sass\/.sass-cache\/bab7501428e1298f693d8df00c7502aa9d07be91\/_flexible-content-module.scssc": {
@@ -892,6 +904,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/navigation\/_navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/page-post-templates\/_blog-posts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/page-post-templates\/_blog-posts.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

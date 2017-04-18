@@ -261,3 +261,13 @@ require get_template_directory() . '/inc/acf-advanced-content-section.php';
 require get_template_directory() . '/inc/acf-mid-page-navigation-section.php';
 require get_template_directory() . '/inc/acf-testimonial-section.php';
 require get_template_directory() . '/inc/acf-associates-section.php';
+
+
+/**
+ * Blog page functions.
+ */
+
+// function custom_excerpt_length( $length ) {
+// 	return 20;
+// }
+// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
