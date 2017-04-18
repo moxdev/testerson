@@ -41,7 +41,15 @@ get_header(); ?>
 
 					endwhile;
 
-					the_posts_navigation();
+					// the_posts_navigation();
+					// the_posts_pagination( array( 'mid_size' => 2 ) );
+					// if (function_exists("pagination")) {
+					//     pagination($custom_query->max_num_pages);
+					// }
+
+					if( function_exists("pagination") ) :
+						pagination($custom_query->max_num_pages);
+					endif;
 
 				else :
 
