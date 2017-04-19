@@ -14,31 +14,48 @@
 
 get_header();
 
-	if (is_home() && get_option('page_for_posts') ) {
-		if ( has_post_thumbnail() ) {
-		    	the_post_thumbnail();
-		}
-	}
+	if(is_home()) {
+    	$img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
+    	$featured_image = $img[0];
+    	$slug = get_page_by_path( 'blog' );
 
+    	?>
 
+    	<div class="featured-image-full-width" style="background-image: url( <?php echo $featured_image ?> ) !important;">
 
-	?>
+			<?php if(function_exists('get_field')) {
+        		$on_page_title = get_field('on_page_title', $slug->ID);
+
+        		if($on_page_title) { ?>
+            		<header class="featured-header">
+                		<h1 class="featured-title">
+                    		<?php echo wp_kses(
+                        		$on_page_title,
+                        			array(
+                        	    		'span' => array(),
+                        	    		'em' => array(),
+                        	    		'strong' => array()
+                        			)
+                    		); ?>
+                		</h1>
+            		</header><!-- .featured-header -->
+        		<?php } else { ?>
+           			<header class="featured-header">
+                		<?php single_post_title( '<h1 class="page-title screen-reader-text">', '</h1>' ); ?>
+            		</header><!-- .featured-header -->
+        		<?php }
+   			} ?>
+
+		</div>
+
+    <?php } ?>
 
 	<div class="wrapper">
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 				<div class="blog-post-wrapper">
 
-					<?php
-					if ( have_posts() ) :
-
-						if ( is_home() && ! is_front_page() ) : ?>
-							<header>
-								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-							</header>
-
-						<?php
-						endif;
+					<?php if ( have_posts() ) :
 
 						/* Start the Loop */
 						while ( have_posts() ) : the_post();
@@ -53,10 +70,6 @@ get_header();
 						endwhile;
 
 						// the_posts_navigation();
-						// the_posts_pagination( array( 'mid_size' => 2 ) );
-						// if (function_exists("pagination")) {
-						//     pagination($custom_query->max_num_pages);
-						// }
 
 						if( function_exists("pagination") ) :
 							pagination($custom_query->max_num_pages);

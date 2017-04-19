@@ -1,10 +1,33 @@
 .blog {
 
-    .primary {
+    .featured-image-full-width {
+        width: 100%;
+        min-height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+
+    .featured-title {
+        color: #fff;
+        text-align: center;
+        margin: auto;
+        @include padding-left-right;
+        @include padding-top-bottom;
+        text-shadow: 0px 3px 4.83px rgba(0, 0, 0, 0.75);
+    }
+
+    #primary {
 
     }
 
-    .secondary {
+    #secondary {
+        margin-top: 3em;
 
     }
 
@@ -12,12 +35,17 @@
         .wrapper {
             display: flex;
 
-            .primary {
+            #primary {
+                flex: 2;
+                order: 2;
 
             }
 
-            .secondary{
-
+            #secondary{
+                flex: 1;
+                order: 1;
+                display: block;
+                margin-top: 0;
             }
 
         }
@@ -31,30 +59,13 @@
         margin-bottom: 3em;
     }
 
-    // .pagination {
-
-    //     .nav-links {
-
-    //         .current {
-    //             padding: .5em;
-    //         }
-
-    //         a {
-    //             text-decoration: none;
-    //             background-color: $color__green;
-    //             padding: .5em;
-    //             color: #fff;
-    //         }
-    //     }
-    // }
-    //
-    /* Pagination */
     .pagination {
         clear:both;
         position:relative;
         font-size:11px; /* Pagination text size */
         line-height:13px;
         float:left; /* Pagination float direction */
+        margin-bottom: 3em;
 
         .intro {
             background-color: transparent;
@@ -72,10 +83,6 @@
         width:auto;
         color:#fff; /* Pagination text color */
         background: $color__green; /* Pagination non-active background color */
-        -webkit-transition: background .15s ease-in-out;
-        -moz-transition: background .15s ease-in-out;
-        -ms-transition: background .15s ease-in-out;
-        -o-transition: background .15s ease-in-out;
         transition: background .15s ease-in-out;
     }
 
@@ -99,3 +106,11 @@
     }
 }
 
+.post-template-default {
+
+    .site-content {
+        @include padding-left-right;
+        @extend .wrapper;
+    }
+
+}

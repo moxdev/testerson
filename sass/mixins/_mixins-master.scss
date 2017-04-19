@@ -84,6 +84,16 @@
     }
 }
 
+@mixin padding-top-bottom() {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+
+    @include respond-to(small) {
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
+    }
+}
+
 // Outside margin
 @mixin margin-left-right() {
     margin-left: 1.75rem;
