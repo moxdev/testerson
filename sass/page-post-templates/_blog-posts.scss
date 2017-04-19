@@ -1,5 +1,31 @@
+.blog {
+
+    .primary {
+
+    }
+
+    .secondary {
+
+    }
+
+    @include respond-to(medium) {
+        .wrapper {
+            display: flex;
+
+            .primary {
+
+            }
+
+            .secondary{
+
+            }
+
+        }
+    }
+
+}
+
 .blog-post-wrapper {
-    @include padding-left-right;
 
     .post {
         margin-bottom: 3em;
