@@ -29,6 +29,10 @@
         }
     }
 
+    .wrapper {
+
+    }
+
     #primary {
 
     }
@@ -60,6 +64,10 @@
 }
 
 .blog-post-wrapper {
+    background-image:url(http://localhost:8888/test-site/wp-content/themes/test/imgs/blog-background-img.svg);
+    background-repeat: no-repeat;
+    background-position: 110% 10%;
+    background-size: 90%;
 
     .post {
         margin-bottom: 3em;
