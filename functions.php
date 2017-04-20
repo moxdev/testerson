@@ -312,6 +312,6 @@ add_filter('excerpt_length', 'et_excerpt_length');
 
 function et_excerpt_more($more) {
     global $post;
-    return '<span class="view-full-post"><a href="'. get_permalink($post->ID) . '" class="view-full-post-btn">Read More ></a></span>';
+    return '<span class="view-full-post"><a href="'. esc_url( get_permalink($post->ID) ) . '" class="view-full-post-btn">Read More ></a></span>';
 }
 add_filter('excerpt_more', 'et_excerpt_more');

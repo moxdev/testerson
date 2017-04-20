@@ -71,7 +71,7 @@ get_header();
 
 						// the_posts_navigation();
 
-						if( function_exists("pagination") ) :
+						if( function_exists('pagination') ) :
 							pagination($custom_query->max_num_pages);
 						endif;
 
